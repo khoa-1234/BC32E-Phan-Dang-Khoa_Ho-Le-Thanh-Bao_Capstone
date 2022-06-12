@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./lib/owl.carousel.min.css">
     <link rel="stylesheet" href="./lib/owl.theme.default.min.css">
     <!-- Style -->
+    <link rel="stylesheet" href="./css/responsive.css">
     <!-- <link rel="stylesheet" href="./css/themedark.css"> -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -36,7 +37,6 @@
     <!-- ----------HEADER---------- -->
     <header id="main-header" class="fixed-top site-header">
         <div class="logo container">
-
             <nav class="navbar">
                 <!-- SITE -->
                 <h1 class="text">
@@ -74,16 +74,11 @@
                             <div class="mode-container" >
                                 <button type="button" class="theme-icon"  onclick="myFunction()">
                                     <i id="icon" class="sun" aria-hiden="true" ></i>
-                                    <i id="icon" class="moon" aria-hidden="true"></i>
-                                    
+                                    <i id="icon" class="moon" aria-hidden="true"></i>                                    
                                 </button>
-                               
-
                             </div>
                         </div>
                     </div>
-
-
                 </div>
                 <!-- MENU -->
                 <button class="navbar-toggler" id="toggler" style="margin-bottom: 10px; padding-left: 0px;"
@@ -92,7 +87,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar"
-                    style="margin-left: 50rem; margin-right: 20px;">
+                    style="margin-left: 40rem; margin-right: 20px; padding-left: 160px;">
                     <ul class="navbar-nav" id="submenu">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">HOME</a>
@@ -129,26 +124,28 @@
     <section id="carousel" class="carousel">
         <div class="container-fluid">
             <div class="row d-flex align-items-center">
-                <div class="col-md-5">
-                    <div class="banner-left">
-                        <h2 id="farm" class="farm-text">FARM</h2>
-                        <div class="content">
-                            <h3 id="farm-title" class="farm-title">
-                                Welcome to Farmstead <br> where Natural Food is born!
-                            </h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium.</p>
-                            <button class="btn btn-style mt-sm-5 mt-4" href="">LEARN MORE</button>
+                <div class="col-md-5 left">
+                    <div class="homepage">
+                        <div class="banner-left">
+                            <h2 id="farm" class="farm-text">FARM</h2>
+                            <div class="content">
+                                <h3 id="farm-title" class="farm-title mb-sm-4 mb-2">
+                                    Welcome to Farmstead <br> where Natural Food is born!
+                                </h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium.</p>
+                                <button class="btn btn-style mt-sm-5 mt-4" href="">LEARN MORE</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 p-0 ml-auto">
+                <div class="col-md-7 p-0 ml-auto right">
                     <div class="banner-right">
                         <div class="image">
                             <input type="radio" class="radio" name="slider" id="radio1" />
                             <input type="radio" class="radio" name="slider" id="radio2" />
                             <input type="radio" class="radio" name="slider" id="radio3" />
-                            <div class="image-inner">
+                            <div id="owl-carousel" class="owl-carousel owl-theme image-inner">
                                 <div class="image-slide first">
                                     <div class="banner1">
                                         <div class="wrapper">
@@ -173,11 +170,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="manual-navigation">
-                                <label for="radio1" class="manual-btn first"></label>
-                                <label for="radio2" class="manual-btn second"> </label>
-                                <label for="radio3" class="manual-btn third"></label>
                             </div>
                         </div>
                     </div>
@@ -241,7 +233,7 @@
                             <p id="textP-White">Sed ut perspiciatis unde omnis iste natus
                                 error sit
                                 accusantium doloremque, eaque ipsa quae ab illo
-                                inventore.Sed ut perspiciatis unde omnis iste natus error
+                                inventore. Sed ut perspiciatis unde omnis iste natus error
                                 sit.</p>
                         </div>
                     </div>
@@ -306,6 +298,22 @@
                 $("#main-header").removeClass("nav-fixed");
             }
         });
+    </script>
+<!-- ------------------------------------------ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script>
+        $('#owl-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            dots: true,
+            nav: true,
+            items: 1,
+            rewind: true,
+            // autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+        })
     </script>
 
     <script type="text/javascript">
